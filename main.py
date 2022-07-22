@@ -32,7 +32,6 @@ class Video(Resource):
         args = video_put_args.parse_args()
         videos[video_id] = args
         return videos[video_id]
-        return jsonify({'task': task}), 201
 
     def delete(self, video_id):
         abort_incorrect_id(video_id)
