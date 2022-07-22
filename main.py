@@ -31,7 +31,7 @@ class Video(Resource):
         abort_vid_exists(video_id)
         args = video_put_args.parse_args()
         videos[video_id] = args
-        return videos[video_id]
+        return videos[video_id], 201
 
     def delete(self, video_id):
         abort_incorrect_id(video_id)
